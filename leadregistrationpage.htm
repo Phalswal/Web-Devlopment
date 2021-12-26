@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lead Registration Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: rgb(231, 220, 202);
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        #logo {
+            margin: 10px 34px;
+        }
+
+        #logo img {
+            height: 59px;
+            margin: 3px 6px;
+        }
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Baloo Bhai', cursive;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 550px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            background: url('img2.jpg') no-repeat center center/cover;
+            height: 642px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        #home h1 {
+            color: white;
+            text-align: center;
+            font-family: 'Bree Serif', serif;
+        }
+
+        #home p {
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .h-1 {
+            font-family: 'Bree Serif', serif;
+            font-size: 3.8rem;
+            padding: 12px;
+        }
+
+        .btn {
+            padding: 27px 137px;
+            border: 2px solid white;
+            background-color: brown;
+            color: white;
+            margin: 235px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: rgb(202, 92, 19);
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 19px 20px;
+            margin-top: 8px;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .btn-footer {
+            background-color: #bdb9da;
+            color: black;
+            border: 8px solid #b9b9de;
+            border-radius: 15px;
+            margin: -13px;
+        }
+
+        .btn-footer a {
+            text-decoration: none;
+        }
+
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            font-weight: bold;
+            background-color: white
+        }
+
+        h1 {
+            color: #ea503f;
+            font-family: Arial;
+            text-align: center
+        }
+
+         .container {
+            padding: 76px;
+            background-color: rgb(231, 220, 202);
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .registerbtn {
+            background-color: #cf5a17;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        .registerbtn a{
+            text-decoration: none;
+            background-color: #cf5a17;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: dodgerblue;
+        }
+
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.png" alt="ABC Learning Center">
+        </div>
+        <ul>
+            <li class="item"><a href="homepage.htm">Home</a></li>
+            <li class="item"><a href="coursedetails.htm">Our Courses</a></li>
+            <li class="item"><a href="aboutus.htm">About Us</a></li>
+            <li class="item"><a href="contactus.htm">Contact Us</a></li>
+            <li class="item"><a href="sitemap.htm">Sitemap</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-1">Lead Registration Form</h1>
+        
+    </section>
+
+    <form action="">
+        <div class="container">
+         <br>
+         <br>
+            <p class="h-1">Please fill in this form.</p>
+            <hr>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw"><b>Contact No.</b></label>
+            <input type="password" placeholder="Contact no." name="psw" id="psw" required>
+
+            <label for="psw"><b>Address</b></label>
+            <input type="password" placeholder="Address" name="psw" id="psw" required>
+
+            <label for="psw"><b>Username</b></label>
+            <input type="password" placeholder="Username" name="psw" id="psw" required>
+
+            <label for="psw-repeat"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button class="registerbtn"><a href="RegistrationThankYouPage.htm">Register</a></button>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div>
+    </form>
+       <footer>
+        <div class="footer">
+            Copyright &copy; www.abclearning.com. All rights reserved!
+        </div>
+        <button class="btn-footer"><a href="privacypage.htm">Privacy Policy</a></button>
+
+    </footer>
+</body>
+
+</html>
